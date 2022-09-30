@@ -6,4 +6,5 @@ export interface Album{
     imagen:String;
     estaDeModa:boolean;
     precio:number;
+    puntos:number;
 }
