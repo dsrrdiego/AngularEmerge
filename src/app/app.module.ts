@@ -10,6 +10,7 @@ import { PestaniaArtistasComponent } from './pestania-artistas/pestania-artistas
 import { PestaniaHomeComponent } from './pestania-home/pestania-home.component';
 import { PestaniaRadioComponent } from './pestania-radio/pestania-radio.component';
 import { PestaniaContactosComponent } from './pestania-contactos/pestania-contactos.component';
+import { SisPuntosComponent } from './sis-puntos/sis-puntos.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PestaniaContactosComponent } from './pestania-contactos/pestania-contac
     PestaniaArtistasComponent,
     PestaniaHomeComponent,
     PestaniaRadioComponent,
-    PestaniaContactosComponent
+    PestaniaContactosComponent,
+    SisPuntosComponent
   ],
   imports: [
     BrowserModule,

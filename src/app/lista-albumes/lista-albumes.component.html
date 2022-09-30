@@ -16,9 +16,8 @@
             <td>{{album.genero}}</td>
             <td>{{album.precio | currency}}</td>
             <td>
-                <button class="btn btn-primary btn-sm" (click)="restar(album)">-</button>
-                <input type="text" [(ngModel)]="album.puntos" (keyup)="cambioDePuntaje($event,album)">
-                <button class="btn btn-primary btn-sm" (click)="sumar(album)" >+</button> 
+                <app-sis-puntos class="text-center" [album]="album"></app-sis-puntos>
+            
             </td>
             <td><span class="badge text-bg-warning" *ngIf="album.cantidadDeCanciones>3"> Muchas </span></td>
         </tr>

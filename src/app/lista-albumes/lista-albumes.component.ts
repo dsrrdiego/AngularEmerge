@@ -44,19 +44,6 @@ export class ListaAlbumesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {}
-  sumar(album:Album):void{
-    if (album.puntos<10)
-      album.puntos++;
-  }
-  restar(album:Album):void{
-    if (album.puntos>0)
-      album.puntos--;
-  }
-  cambioDePuntaje(event: { preventDefault():any;key: any;target:any },album:Album):void{
-    if (event.key<0 || event.key>10)
-      event.preventDefault();
-    
-    // console.log(event);
-  }
+  
 
 }
