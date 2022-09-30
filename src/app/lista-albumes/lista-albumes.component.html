@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <td>Imagen</td>
+        <td>Artista</td>
+        <td>Album</td>
+        <td>Genero</td>
+        <td>Genero</td>
+        <td>Precio</td>
+        <td>Cantidad de canciones</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let album of album" [ngClass]="{'estaDeModa':album.estaDeModa}">
+            <td><img [src]="album.imagen" alt=""></td>
+            <td>{{album.artista}}</td>
+            <td>{{album.nombre}}</td>
+            <td>{{album.genero}}</td>
+            <td>{{album.precio | currency}}</td>
+            <td><span class="badge text-bg-warning" *ngIf="album.cantidadDeCanciones>3">Tiene Muhcas Canciones</span></td>
+        </tr>
+        
+    </tbody>
+</table>
