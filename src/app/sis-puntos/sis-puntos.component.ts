@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Album } from '../lista-albumes/Album';
 
 @Component({
@@ -10,18 +10,24 @@ export class SisPuntosComponent implements OnInit {
   
   constructor() {}
 
-  @Input()
-  album:Album ;
+  @Input() valor:number;
+  @Output() valorChange: EventEmitter<number>=new EventEmitter<number>();
+  @Input() max:number;
+  @Input() min:number;
   
   ngOnInit(): void {}
 
-  sumar(album:Album):void{
-    if (album.puntos<10)
-      album.puntos++;
+  sumar():void{
+    debugger;
+    if (this.valor<this.max)
+      this.valor++;
+      this.valorChange.emit(this.valor);
   }
-  restar(album:Album):void{
-    if (album.puntos>0)
-      album.puntos--;
+  restar():void{
+    if (this.valor>this.min)
+      this.valor--;
+      this.valorChange.emit(this.valor);
+
   }
   cambioDePuntaje(event: { preventDefault():any;key: any;target:any },album:Album):void{
     if (event.key<0 || event.key>10)

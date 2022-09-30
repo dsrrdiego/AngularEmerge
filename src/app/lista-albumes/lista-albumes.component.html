@@ -16,8 +16,8 @@
             <td>{{album.genero}}</td>
             <td>{{album.precio | currency}}</td>
             <td>
-                <app-sis-puntos class="text-center" [album]="album"></app-sis-puntos>
-            
+                <app-sis-puntos class="text-center" [(valor)]="album.puntos" [max]=10 [min]=0></app-sis-puntos>
+                
             </td>
             <td><span class="badge text-bg-warning" *ngIf="album.cantidadDeCanciones>3"> Muchas </span></td>
         </tr>
