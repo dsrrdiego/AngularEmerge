@@ -6,12 +6,20 @@ import { AppComponent } from './app.component';
 import { MiReproductorComponent } from './mi-reproductor/mi-reproductor.component';
 import { ListaAlbumesComponent } from './lista-albumes/lista-albumes.component';
 import  { FormsModule } from '@angular/forms';
+import { PestaniaArtistasComponent } from './pestania-artistas/pestania-artistas.component';
+import { PestaniaHomeComponent } from './pestania-home/pestania-home.component';
+import { PestaniaRadioComponent } from './pestania-radio/pestania-radio.component';
+import { PestaniaContactosComponent } from './pestania-contactos/pestania-contactos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MiReproductorComponent,
-    ListaAlbumesComponent
+    ListaAlbumesComponent,
+    PestaniaArtistasComponent,
+    PestaniaHomeComponent,
+    PestaniaRadioComponent,
+    PestaniaContactosComponent
   ],
   imports: [
     BrowserModule,

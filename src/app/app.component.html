@@ -6,17 +6,15 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Artistas</a>
-        <a class="nav-link" href="#">Radio</a>
-        <a class="nav-link disabled">Contactos</a>
+        <a class="nav-link active" aria-current="page" [routerLink]="['/home']">Home</a>
+        <a class="nav-link" [routerLink]="['/artistas']">Artistas</a>
+        <a class="nav-link" [routerLink]="['/radio']">Radio</a>
+        <a class="nav-link "[routerLink]="['/contactos']">Contactos</a>
       </div>
     </div>
   </div>
 </nav>
-<div class="container">
-  <div class="row">
-    <div class="col-10"><app-lista-albumes></app-lista-albumes></div>
-    <div class="col-2"><app-mi-reproductor></app-mi-reproductor></div>
-  </div>
+<div class="container"> 
+
+<router-outlet></router-outlet>
 </div>
