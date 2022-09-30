@@ -4,18 +4,23 @@
         <td>Artista</td>
         <td>Album</td>
         <td>Genero</td>
-        <td>Genero</td>
         <td>Precio</td>
+        <td>-----puntaje------</td>
         <td>Cantidad de canciones</td>
     </thead>
     <tbody>
-        <tr *ngFor="let album of album" [ngClass]="{'estaDeModa':album.estaDeModa}">
-            <td><img [src]="album.imagen" alt=""></td>
-            <td>{{album.artista}}</td>
-            <td>{{album.nombre}}</td>
-            <td>{{album.genero}}</td>
-            <td>{{album.precio | currency}}</td>
-            <td><span class="badge text-bg-warning" *ngIf="album.cantidadDeCanciones>3">Tiene Muhcas Canciones</span></td>
+        <tr *ngFor="let albu of album" [ngClass]="{'estaDeModa':albu.estaDeModa}">
+            <td><img class="img-thumbnail" width="200px" [src]="albu.imagen" alt=""></td>
+            <td>{{albu.artista}}</td>
+            <td>{{albu.nombre}}</td>
+            <td>{{albu.genero}}</td>
+            <td>{{albu.precio | currency}}</td>
+            <td>
+                <button class="btn btn-primary btn-sm" (click)="restar(albu)">-</button>
+                {{albu.puntos}}
+                <button class="btn btn-primary btn-sm" (click)="sumar(albu)">+</button> 
+            </td>
+            <td><span class="badge text-bg-warning" *ngIf="albu.cantidadDeCanciones>3"> Muhcas </span></td>
         </tr>
         
     </tbody>

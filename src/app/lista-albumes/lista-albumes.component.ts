@@ -15,7 +15,8 @@ export class ListaAlbumesComponent implements OnInit {
     "genero":"popular",
     "cantidadDeCanciones":3,
     "estaDeModa":false,
-    precio:123
+    precio:123,
+    puntos:1,
   },{
     "imagen":"assets/foto1.jpg",
     artista:"Marcelete",
@@ -24,6 +25,7 @@ export class ListaAlbumesComponent implements OnInit {
     cantidadDeCanciones:4,
     estaDeModa:false,
     precio:25.642526626246246246,
+    puntos:1,
 
 
   },
@@ -35,13 +37,19 @@ export class ListaAlbumesComponent implements OnInit {
     cantidadDeCanciones:2,
     estaDeModa:true,
     precio:83.5,
+    puntos:1,
 
   }]
 
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  sumar(albu:Album):void{
+    albu.puntos++;
+  }
+  restar(albu:Album):void{
+    albu.puntos--;
   }
 
 }
