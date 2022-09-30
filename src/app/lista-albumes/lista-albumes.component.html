@@ -1,11 +1,11 @@
-<table class="table">
-    <thead class="table" >
+<table class="table text-center">
+    <thead  >
         <td>Imagen</td>
         <td>Artista</td>
         <td>Album</td>
         <td>Genero</td>
         <td>Precio</td>
-        <td>-----puntaje------</td>
+        <td>puntaje</td>
         <td>Cantidad de canciones</td>
     </thead>
     <tbody>
@@ -20,7 +20,7 @@
                 <input type="text" [(ngModel)]="albu.puntos" (keyup)="cambioDePuntaje($event,albu)">
                 <button class="btn btn-primary btn-sm" (click)="sumar(albu)" >+</button> 
             </td>
-            <td><span class="badge text-bg-warning" *ngIf="albu.cantidadDeCanciones>3"> Muhcas </span></td>
+            <td><span class="badge text-bg-warning" *ngIf="albu.cantidadDeCanciones>3"> Muchas </span></td>
         </tr>
         
     </tbody>
