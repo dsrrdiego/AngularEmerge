@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Album } from './Album';
-// import { Album } from './Album';
 
 @Component({
   selector: 'app-lista-albumes',
@@ -8,7 +7,7 @@ import { Album } from './Album';
   styleUrls: ['./lista-albumes.component.scss']
 })
 export class ListaAlbumesComponent implements OnInit {
-  album:Album[]=[{
+  albumes:Album[]=[{
     "imagen":"assets/foto1.jpg",
     "artista":"Batulitos Electronautas",
     "nombre":"Hacia la conquista del Ether",
