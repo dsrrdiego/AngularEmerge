@@ -1,5 +1,5 @@
 <table class="table">
-    <thead>
+    <thead class="table" >
         <td>Imagen</td>
         <td>Artista</td>
         <td>Album</td>
@@ -17,8 +17,8 @@
             <td>{{albu.precio | currency}}</td>
             <td>
                 <button class="btn btn-primary btn-sm" (click)="restar(albu)">-</button>
-                {{albu.puntos}}
-                <button class="btn btn-primary btn-sm" (click)="sumar(albu)">+</button> 
+                <input type="text" [(ngModel)]="albu.puntos" (keyup)="cambioDePuntaje($event,albu)">
+                <button class="btn btn-primary btn-sm" (click)="sumar(albu)" >+</button> 
             </td>
             <td><span class="badge text-bg-warning" *ngIf="albu.cantidadDeCanciones>3"> Muhcas </span></td>
         </tr>

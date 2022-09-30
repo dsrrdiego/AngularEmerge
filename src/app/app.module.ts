@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MiReproductorComponent } from './mi-reproductor/mi-reproductor.component';
 import { ListaAlbumesComponent } from './lista-albumes/lista-albumes.component';
+import  { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ListaAlbumesComponent } from './lista-albumes/lista-albumes.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
