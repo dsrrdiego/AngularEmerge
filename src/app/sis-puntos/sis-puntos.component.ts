@@ -14,14 +14,19 @@ export class SisPuntosComponent implements OnInit {
   @Output() valorChange: EventEmitter<number>=new EventEmitter<number>();
   @Input() max:number;
   @Input() min:number;
-  
+  @Output() maxReached: EventEmitter<string>=new EventEmitter<string>();
+  @Input() puntajeMax:number;
   ngOnInit(): void {}
 
   sumar():void{
-    debugger;
-    if (this.valor<this.max)
+    // debugger;
+    if (this.valor<this.max){
       this.valor++;
       this.valorChange.emit(this.valor);
+    }
+    if (this.valor>this.puntajeMax)
+    this.maxReached.emit("supero el puntaje inicial");
+
   }
   restar():void{
     if (this.valor>this.min)

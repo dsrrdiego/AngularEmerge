@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReproductorService } from '../reproductor.service';
 import { Album } from './Album';
 
 @Component({
@@ -16,6 +17,7 @@ export class ListaAlbumesComponent implements OnInit {
     "estaDeModa":false,
     precio:123,
     puntos:1,
+    puntajeMaximo:3,
   },{
     "imagen":"assets/foto1.jpg",
     artista:"Marcelete",
@@ -25,6 +27,7 @@ export class ListaAlbumesComponent implements OnInit {
     estaDeModa:false,
     precio:25.642526626246246246,
     puntos:1,
+    puntajeMaximo:5,
 
 
   },
@@ -37,13 +40,22 @@ export class ListaAlbumesComponent implements OnInit {
     estaDeModa:true,
     precio:83.5,
     puntos:1,
+    puntajeMaximo:5,
 
   }]
 
-
-  constructor() { }
+  // reproductor : ReproductorService;
+  constructor(private reproductor:ReproductorService) { 
+    // this.reproductor=new ReproductorService();
+  }
 
   ngOnInit(): void {}
-  
+  reproducir(album):void{
+    this.reproductor.reproducir(album);
+  }
+
+  maxReached(m:string):void{
+    alert(m);
+  }
 
 }

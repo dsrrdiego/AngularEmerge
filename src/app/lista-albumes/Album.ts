@@ -7,4 +7,5 @@ export interface Album{
     estaDeModa:boolean;
     precio:number;
     puntos:number;
+    puntajeMaximo:number;
 }
