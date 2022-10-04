@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 // import { ConsoleReporter } from 'jasmine';
 import { Album } from './lista-albumes/Album';
 
@@ -6,15 +7,17 @@ import { Album } from './lista-albumes/Album';
   providedIn: 'root'
 })
 export class ReproductorService {
-  listaCanciones:Album[]=[];
+  // listaAlbumes:Album[]=[];
+  private _listaAlbumes :Album[]=[];
+  listaAlbumes: BehaviorSubject<Album[]> =new BehaviorSubject(this._listaAlbumes);
 
   reproducir(album: Album) {
-    let item:Album=this.listaCanciones.find((v1)=>v1.nombre==album.nombre)
+    let item:Album=this._listaAlbumes.find((v1)=>v1.nombre==album.nombre)
     if (!item){
-      this.listaCanciones.push(album);
+      this._listaAlbumes.push(album);
     }
-      console.log(this.listaCanciones);
-    // throw new Error('Method not implemented.');
+      console.log(this._listaAlbumes);
+      this.listaAlbumes.next(this._listaAlbumes);
   }
 
   constructor() { }
