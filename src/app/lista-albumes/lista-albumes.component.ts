@@ -44,9 +44,9 @@ export class ListaAlbumesComponent implements OnInit {
 
   }]
 
-  // reproductor : ReproductorService;
+  // injeccion de dependencia
   constructor(private reproductor:ReproductorService) { 
-    // this.reproductor=new ReproductorService();
+    
   }
 
   ngOnInit(): void {}

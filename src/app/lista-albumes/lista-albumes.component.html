@@ -6,6 +6,7 @@
         <td>Genero</td>
         <td>Precio</td>
         <td>puntaje</td>
+        <td>agregar</td>
         <td>Cantidad de canciones</td>
     </thead>
     <tbody>
@@ -17,8 +18,9 @@
             <td>{{album.precio | currency}}</td>
             <td>
                 <app-sis-puntos class="text-center" [(valor)]="album.puntos" [max]=10 [min]=0 [puntajeMax]="album.puntajeMaximo" (maxReached)="maxReached($event)"></app-sis-puntos>
-                <button class="btn" (click)="reproducir(album)">Play</button>
-                <h1 ></h1>
+            </td>
+            <td>
+                <button class="btn btn-primary btn-sm" (click)="reproducir(album)">Play</button>
             </td>
             <td><span class="badge text-bg-warning" *ngIf="album.cantidadDeCanciones>3"> Muchas </span></td>
         </tr>
