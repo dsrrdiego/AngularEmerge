@@ -11,6 +11,7 @@ import { PestaniaHomeComponent } from './pestania-home/pestania-home.component';
 import { PestaniaRadioComponent } from './pestania-radio/pestania-radio.component';
 import { PestaniaContactosComponent } from './pestania-contactos/pestania-contactos.component';
 import { SisPuntosComponent } from './sis-puntos/sis-puntos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SisPuntosComponent } from './sis-puntos/sis-puntos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
