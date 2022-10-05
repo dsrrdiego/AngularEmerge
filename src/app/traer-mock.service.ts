@@ -11,7 +11,6 @@ export class TraerMockService {
 
   constructor(private http:HttpClient) { }
   public traer():Observable<Album[]>{
-    alert("llego");
     return this.http.get<Album[]>(URL);
   }
 }

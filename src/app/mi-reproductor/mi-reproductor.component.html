@@ -1,6 +1,7 @@
 <h1>reproductor</h1>
 <ul>
     <li *ngFor="let album of miLista$ |async">
-        {{album.nombre}} : {{album.puntos}}
+        {{album.artista}} : {{album.nombre}}
+        <br>
     </li>
 </ul>

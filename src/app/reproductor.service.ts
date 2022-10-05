@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-// import { ConsoleReporter } from 'jasmine';
 import { Album } from './lista-albumes/Album';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReproductorService {
-  // listaAlbumes:Album[]=[];
   private _listaAlbumes :Album[]=[];
   listaAlbumes: BehaviorSubject<Album[]> =new BehaviorSubject(this._listaAlbumes);
 
@@ -16,7 +14,6 @@ export class ReproductorService {
     if (!item){
       this._listaAlbumes.push(album);
     }
-      console.log(this._listaAlbumes);
       this.listaAlbumes.next(this._listaAlbumes);
   }
 

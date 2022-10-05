@@ -19,7 +19,6 @@ export class SisPuntosComponent implements OnInit {
   ngOnInit(): void {}
 
   sumar():void{
-    // debugger;
     if (this.valor<this.max){
       this.valor++;
       this.valorChange.emit(this.valor);
@@ -38,6 +37,5 @@ export class SisPuntosComponent implements OnInit {
     if (event.key<0 || event.key>10)
       event.preventDefault();
     
-    // console.log(event);
   }
 }
